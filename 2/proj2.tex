@@ -30,7 +30,7 @@
     Fakulta informačních technologií}\\
     \vspace{\stretch{0.382}}
     {\LARGE
-    Typografie a publikování - 2. projekt\\[0.3em]
+    Typografie a publikování -- 2. projekt\\[0.3em]
     Sazba dokumentů a matematických výrazů\\
     }
     \vspace{\stretch{0.618}}
@@ -45,7 +45,7 @@ Dalibor Králik (xkrali20)}
 
 \section*{Úvod}
 
-V této úloze si vyzkoušíme sazbu titulní strany, matematických vzorců, prostředí a dalších textových struktur obvyklých pro technicky zaměřené texty (například rovnice (\ref{Rovnice}) nebo Definice \ref{def} na straně \pageref{def}). Pro vytvoření těchto odkazů používáme příkazy \texttt{{\textbackslash label}}, \texttt{{\textbackslash ref}} a \texttt{{\textbackslash pageref}}.\par
+V této úloze si vyzkoušíme sazbu titulní strany, matematic\-kých vzorců, prostředí a dalších textových struktur obvyklých pro technicky zaměřené texty (například rovnice (\ref{Rovnice}) nebo Definice \ref{def} na straně \pageref{def}). Pro vytvoření těchto odkazů používáme příkazy \texttt{{\textbackslash label}}, \texttt{{\textbackslash ref}} a \texttt{{\textbackslash pageref}}.\par
 
 Na titulní straně je využito sázení nadpisu podle optického středu s využitím zlatého řezu. Tento postup byl probírán na přednášce. Dále je na titulní straně použito odřádkování se zadanou relativní velikostí 0,4~em~a~0,3~em.
 
@@ -53,36 +53,36 @@ Na titulní straně je využito sázení nadpisu podle optického středu s vyu�
 
 \section{Matematický text}
 
-Nejprve se podíváme na sázení matematických symbolů a výrazů v plynulém textu včetně sazby definic a vět s využitím balíku \texttt{amsthm}. Rovněž použijeme poznámku pod čarou s použitím příkazu \texttt{{\textbackslash footnote}}. Někdy je vhodné použít konstrukci \texttt{\$\string{\string}\$} nebo \texttt{{\textbackslash mbox\string{\string}}}, která říká, že (matematický) text nemá být zalomen. 
+Nejprve se podíváme na sázení matematických symbolů~a výrazů v plynulém textu včetně sazby definic a vět s využitím balíku \texttt{amsthm}. Rovněž použijeme poznámku pod čarou s použitím příkazu \texttt{{\textbackslash footnote}}. Někdy je vhodné použít konstrukci \texttt{\$\string{\string}\$} nebo \texttt{{\textbackslash mbox\string{\string}}}, která říká, že (matematický) text nemá být zalomen. 
 
 \begin{definition}
     
-    Nedeterministický Turingův stroj \textit{(NTS) je šestice tvaru $M=(Q,\Sigma,\Gamma,\delta,q_0,q_F)$, kde:}
+    Nedeterministický Turingův stroj \emph{(NTS) je šestice tvaru $M=(Q,\Sigma,\Gamma,\delta,q_0,q_F)$, kde:}
     \begin{itemize}
-        \item \textit{Q je konečná množina} vnitřních (řídicích) stavů,
-        \item \textit{$\Sigma$ je konečná množina symbolů nazývaná} vstupní abeceda, $\Delta \notin \Sigma$,
-        \item \textit{$\Gamma$ je konečná množina symbolů, $\Sigma \subset \Gamma$, $\Delta \in \Gamma$ , nazývaná} pásková abeceda,
-        \item \textit{ $\delta : (Q \setminus \{q_f\}) \times \Gamma \rightarrow 2^{Q\times(\Gamma\cup\{L,R\})}$je parciální} přechodová funkce, a
+        \item \emph{Q je konečná množina} vnitřních (řídicích) stavů,
+        \item \emph{$\Sigma$ je konečná množina symbolů nazývaná} vstupní abeceda, $\Delta \notin \Sigma$,
+        \item \emph{$\Gamma$ je konečná množina symbolů, $\Sigma \subset \Gamma$, $\Delta \in \Gamma$ , nazývaná} pásková abeceda,
+        \item \emph{ $\delta : (Q \setminus \{q_f\}) \times \Gamma \rightarrow 2^{Q\times(\Gamma\cup\{L,R\})}$, kde $L,R \notin \Gamma$ je parciální} přechodová funkce, a
         \item $q_0 \in Q$ je počáteční stav a $q_F \in Q$ je koncový stav.
     \end{itemize}
     
 \end{definition}
 
-Symbol $\Delta$ značí tzv. \textit{blank} (prázdný symbol), který se vyskytuje na místech pásky, která nebyla ještě použita.\par
-\textit{Konfigurace pásky} se skládá z nekonečného řetězce, který reprezentuje obsah pásky, a pozice hlavy na tomto řetězci. Jedná se o prvek množiny $\{\gamma\Delta^\omega| \gamma \in \Gamma^*\}\times \mathbb{N}$\footnote{Pro libovolnou abecedu $\Sigma$ je $\Sigma^\omega$ množina všech \textit{nekonečných} řetězců nad $\Sigma$, tj. nekonečných posloupností symbolů ze $\Sigma$.}.\\
-\textit{Konfiguraci pásky} obvykle zapisujeme jako ${\Delta xyz\underline{z}x\Delta \dots}$ (podtržení značí pozici hlavy).
-\textit{Konfigurace stroje} je pak dána stavem řízení a konfigurací pásky. Formálně se jedná o prvek množiny $Q\times\{\gamma\Delta^\omega|\gamma \in \Gamma^*\}\times \mathbb{N}$.
+Symbol $\Delta$ značí tzv. \emph{blank} (prázdný symbol), který se vyskytuje na místech pásky, která nebyla ještě použita.\par
+\emph{Konfigurace pásky} se skládá z nekonečného řetězce, který reprezentuje obsah pásky, a pozice hlavy na tomto řetězci. Jedná se o prvek množiny $\{\gamma\Delta^\omega\;|\; \gamma \in \Gamma^*\}\times \mathbb{N}$\footnote{Pro libovolnou abecedu $\Sigma$ je $\Sigma^\omega$ množina všech \emph{nekonečných} řetězců nad $\Sigma$, tj. nekonečných posloupností symbolů ze $\Sigma$.}.\\
+\emph{Konfiguraci pásky} obvykle zapisujeme jako ${\Delta xyz\underline{z}x\Delta \dots}$ (podtržení značí pozici hlavy).
+\emph{Konfigurace stroje} je pak dána stavem řízení a konfigurací pásky. Formálně se jedná o prvek množiny $Q\times\{\gamma\Delta^\omega\;|\;\gamma \in \Gamma^*\}\times \mathbb{N}$.
 
 \subsection{Podsekce obsahující definici a větu}
 
 \begin{definition}\label{def}
-    Řetězec $\omega$ nad abecedou $\Sigma$ je přijat NTS~ $M$, \textit{jestliže $M$ při aktivaci z počáteční konfigurace pásky $\underline{\Delta}\omega\Delta$~\dots a počátečního stavu $q_0$ může zastavit přechodem do koncového stavu $q_F$, tj. $(q_0, \Delta\omega\Delta^\omega,0)\overset{*}{\underset{M}{\vdash}} (q_F,\gamma, n)$ pro nějaké $\gamma \in \Gamma^*$ a $n \in \mathbb{N}$.} \par
-    \textit{Množinu $L(M) = \{\omega\; |\; \omega$ je přijat \textit{NTS} $M$ nazýváme} jazyk přijímaný NTS $M$.
+    Řetězec $\omega$ nad abecedou $\Sigma$ je přijat NTS~ $M$, \emph{jestliže $M$ při aktivaci z počáteční konfigurace pásky $\underline{\Delta}\omega\Delta$~\dots a počátečního stavu $q_0$ může zastavit přechodem do koncového stavu $q_F$, tj. $(q_0, \Delta\omega\Delta^\omega,0)\overset{*}{\underset{M}{\vdash}} (q_F,\gamma, n)$ pro nějaké $\gamma \in \Gamma^*$ a $n \in \mathbb{N}$.} \par
+    \emph{Množinu $L(M) = \{\omega\; |\; \omega$ je přijat \emph{NTS} $M$ \} $\subseteq \Sigma^*$ nazýváme} jazyk přijímaný NTS $M$.
 \end{definition}
 Nyní si vyzkoušíme sazbu vět a důkazů opět s použitím balíku \texttt{amsthm}.
 
 \begin{sentence}
-    \textit{Třída jazyků, které jsou přijímány NTS, odpovídá rekurzivně} vyčíslitelným jazykům.
+    \emph{Třída jazyků, které jsou přijímány NTS, odpovídá rekurzivně} vyčíslitelným jazykům.
 \end{sentence}
 
 
@@ -104,7 +104,7 @@ S vynucením méně úsporné sazby příkazem \texttt{{\textbackslash limits}} 
 \section{Matice}
 
 Pro sázení matic se velmi často používá prostředí \texttt{array} a závorky (\texttt{{\textbackslash left}}, \texttt{{\textbackslash right}}). 
-$$ \mathrm{A} = \left|
+$$ \mathrm{\textbf{A}} = \left|
 \begin{array}{cccc}
 a_{11}& a_{12}& \cdots& a_{1n}\\
 a_{21}& a_{22}& \cdots& a_{2n}\\
