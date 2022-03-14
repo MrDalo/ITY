@@ -14,5 +14,5 @@ proj2:
 	ps2pdf proj2.ps
 
 clear:
-	rm *.out *.aux *.ps *.dvi *.log
+	rm -f *.out *.aux *.ps *.dvi *.log
 
