@@ -1,0 +1,7 @@
+make.exe: Entering directory 'c:/Users/dadok/Desktop/VUT FIT/stvrty semester/ITY/ITY/1'
+latex proj1.tex
+dvips proj1.dvi
+ps2pdf proj1.ps
+rm *.out *.aux *.ps *.dvi *.log
+make.exe: Leaving directory 'c:/Users/dadok/Desktop/VUT FIT/stvrty semester/ITY/ITY/1'
+ 

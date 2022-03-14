@@ -1,0 +1,129 @@
+\documentclass[a4paper, 11pt, twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[IL2]{fontenc}
+\usepackage[left=1.5cm, text={18cm, 25cm}, top=2.5cm]{geometry}
+%\usepackage{hyperref}
+\usepackage{times}
+\usepackage{amsthm, amssymb, amsmath}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definice}
+
+\theoremstyle{definition}
+\newtheorem{sentence}{Věta}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{titlepage}
+\begin{center}
+    
+    \Huge
+    \textsc{
+    Vysoké učení technické v Brně\\[0.4em]}
+    \huge
+    \textsc{
+    Fakulta informačních technologií}\\
+    \vspace{\stretch{0.382}}
+    {\LARGE
+    Typografie a publikování - 2. projekt\\[0.3em]
+    Sazba dokumentů a matematických výrazů\\
+    }
+    \vspace{\stretch{0.618}}
+\end{center}
+
+{\Large 2022 \hfill
+Dalibor Králik (xkrali20)}
+
+\end{titlepage}
+\newpage
+
+
+\section*{Úvod}
+
+V této úloze si vyzkoušíme sazbu titulní strany, matematických vzorců, prostředí a dalších textových struktur obvyklých pro technicky zaměřené texty (například rovnice (\ref{Rovnice}) nebo Definice \ref{def} na straně \pageref{def}). Pro vytvoření těchto odkazů používáme příkazy \texttt{{\textbackslash label}}, \texttt{{\textbackslash ref}} a \texttt{{\textbackslash pageref}}.\par
+
+Na titulní straně je využito sázení nadpisu podle optického středu s využitím zlatého řezu. Tento postup byl probírán na přednášce. Dále je na titulní straně použito odřádkování se zadanou relativní velikostí 0,4~em~a~0,3~em.
+
+
+
+\section{Matematický text}
+
+Nejprve se podíváme na sázení matematických symbolů a výrazů v plynulém textu včetně sazby definic a vět s využitím balíku \texttt{amsthm}. Rovněž použijeme poznámku pod čarou s použitím příkazu \texttt{{\textbackslash footnote}}. Někdy je vhodné použít konstrukci \texttt{\$\string{\string}\$} nebo \texttt{{\textbackslash mbox\string{\string}}}, která říká, že (matematický) text nemá být zalomen. 
+
+\begin{definition}
+    
+    Nedeterministický Turingův stroj \textit{(NTS) je šestice tvaru $M=(Q,\Sigma,\Gamma,\delta,q_0,q_F)$, kde:}
+    \begin{itemize}
+        \item \textit{Q je konečná množina} vnitřních (řídicích) stavů,
+        \item \textit{$\Sigma$ je konečná množina symbolů nazývaná} vstupní abeceda, $\Delta \notin \Sigma$,
+        \item \textit{$\Gamma$ je konečná množina symbolů, $\Sigma \subset \Gamma$, $\Delta \in \Gamma$ , nazývaná} pásková abeceda,
+        \item \textit{ $\delta : (Q \setminus \{q_f\}) \times \Gamma \rightarrow 2^{Q\times(\Gamma\cup\{L,R\})}$je parciální} přechodová funkce, a
+        \item $q_0 \in Q$ je počáteční stav a $q_F \in Q$ je koncový stav.
+    \end{itemize}
+    
+\end{definition}
+
+Symbol $\Delta$ značí tzv. \textit{blank} (prázdný symbol), který se vyskytuje na místech pásky, která nebyla ještě použita.\par
+\textit{Konfigurace pásky} se skládá z nekonečného řetězce, který reprezentuje obsah pásky, a pozice hlavy na tomto řetězci. Jedná se o prvek množiny $\{\gamma\Delta^\omega| \gamma \in \Gamma^*\}\times \mathbb{N}$\footnote{Pro libovolnou abecedu $\Sigma$ je $\Sigma^\omega$ množina všech \textit{nekonečných} řetězců nad $\Sigma$, tj. nekonečných posloupností symbolů ze $\Sigma$.}.\\
+\textit{Konfiguraci pásky} obvykle zapisujeme jako ${\Delta xyz\underline{z}x\Delta \dots}$ (podtržení značí pozici hlavy).
+\textit{Konfigurace stroje} je pak dána stavem řízení a konfigurací pásky. Formálně se jedná o prvek množiny $Q\times\{\gamma\Delta^\omega|\gamma \in \Gamma^*\}\times \mathbb{N}$.
+
+\subsection{Podsekce obsahující definici a větu}
+
+\begin{definition}\label{def}
+    Řetězec $\omega$ nad abecedou $\Sigma$ je přijat NTS~ $M$, \textit{jestliže $M$ při aktivaci z počáteční konfigurace pásky $\underline{\Delta}\omega\Delta$~\dots a počátečního stavu $q_0$ může zastavit přechodem do koncového stavu $q_F$, tj. $(q_0, \Delta\omega\Delta^\omega,0)\overset{*}{\underset{M}{\vdash}} (q_F,\gamma, n)$ pro nějaké $\gamma \in \Gamma^*$ a $n \in \mathbb{N}$.} \par
+    \textit{Množinu $L(M) = \{\omega\; |\; \omega$ je přijat \textit{NTS} $M$ nazýváme} jazyk přijímaný NTS $M$.
+\end{definition}
+Nyní si vyzkoušíme sazbu vět a důkazů opět s použitím balíku \texttt{amsthm}.
+
+\begin{sentence}
+    \textit{Třída jazyků, které jsou přijímány NTS, odpovídá rekurzivně} vyčíslitelným jazykům.
+\end{sentence}
+
+
+\section{Rovnice}
+
+Složitější matematické formulace sázíme mimo plynulý text. Lze umístit několik výrazů na jeden řádek, ale pak je třeba tyto vhodně oddělit, například příkazem \texttt{{\textbackslash quad}}.
+$$\quad x^2-\sqrt[4]{y_1*y_2^3} \quad x > y_1 \geq y_2 \quad z_{z_z} \neq \alpha_1^{\alpha_2^{\alpha_3}}$$
+
+V rovnici (\ref{equation}) jsou využity tři typy závorek s různou explicitně definovanou velikostí.
+
+\begin{eqnarray}
+\label{equation}x&=& \bigg\{a\oplus \Big[b \cdot (c\ominus d)\Big] \bigg\}^{4/2}\\
+\label{Rovnice}y&=&\lim_{\beta \to \infty} \frac{\tan^2 \beta - \sin^3 \beta}{\frac{1}{\frac{1}{log_{42}x}+\frac{1}{2}}}
+\end{eqnarray}
+\par V této větě vidíme, jak vypadá implicitní vysázení limity $\lim_{n \to \infty} f(n)$ v normálním odstavci textu. Podobně je to i s dalšími symboly jako $\bigcup_{N\in \mathcal{M}} N$ či  $\sum_{j=0}^n x_j^2$. 
+S vynucením méně úsporné sazby příkazem \texttt{{\textbackslash limits}} budou vzorce vysázeny v podobě $\lim\limits _{n \to \infty}f(n)$ a $\sum\limits _{j=0}^n x_j^2$. 
+
+
+\section{Matice}
+
+Pro sázení matic se velmi často používá prostředí \texttt{array} a závorky (\texttt{{\textbackslash left}}, \texttt{{\textbackslash right}}). 
+$$ \mathrm{A} = \left|
+\begin{array}{cccc}
+a_{11}& a_{12}& \cdots& a_{1n}\\
+a_{21}& a_{22}& \cdots& a_{2n}\\
+%\vdots\quad\quad \vdots\quad\quad \ddots\quad\quad \vdots\\
+\vdots& \vdots& \ddots& \vdots\\
+a_{m1}& a_{m2}& \cdots& a_{mn}
+\end{array} \right| = \left|
+\begin{array}{cc}
+t& u\\
+v& w
+\end{array}\right| =tw - uw$$
+Prostředí \texttt{array} lze úspěšně využít i jinde.
+
+$$ \binom{n}{k} = \left\{
+\begin{array}{c l}
+\frac{n!}{k!(n-k!)} & \text{pro 0} \leq k \leq n \\
+0 & \text{pro } k > n \text{ nebo } k < 0
+\end{array} \right.$$
+
+
+
+\end{document}
