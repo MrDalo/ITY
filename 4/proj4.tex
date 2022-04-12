@@ -1,0 +1,77 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[IL2]{fontenc}
+\usepackage[left=2cm, text={17cm, 24cm}, top=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{times}
+\usepackage{multirow}
+
+
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{titlepage}
+\begin{center}
+    
+    {\Huge
+    \textsc{
+    Vysoké učení technické v Brně\\[0.4em]}
+    {\huge
+    \textsc{
+    Fakulta informačních technologií}}}\\
+    \vspace{\stretch{0.382}}
+    {\LARGE
+    Typografie a publikování -- 4. projekt\\[0.3em]
+    {\Huge Bibliografické citace a odkazy}
+    }
+    \vspace{\stretch{0.618}}
+\end{center}
+
+{\Large \today \hfill
+Dalibor Králik (xkrali20)}
+
+\end{titlepage}
+
+\section{\LaTeX}
+\LaTeX\:  je typografickým nástrojom, ktorý je používaný celým svetom pre vedecké dokumenty, knihy a tak isto pre ostatné formy publikácií viz  \cite{WhyLearnLatex}. 
+ \LaTeX\:  je nadstavbou pôvodného Texu, ktorý je značkovacím jazykom, umožňuje profesionálnu sadzbu dokumentov v mnoho jazykova  ich špeciálnu úpravu. \LaTeX\: ako nástroj je konkurenciou pre editori ako je napríklad MS Word alebo LibreOffice Writter. \cite{SokolMiroslav2012OLe}
+
+\section{Ako vyzerá práca s \LaTeX om}
+Systém \LaTeX\: nie je WYSIWYG editor \cite{WYSIWYG}, takže práca v ňom pripomína skôr programovanie. Práca v ňom pozostáva z troch krokov, ako je uvedené v \cite{Rybicka2003}:
+    \begin{enumerate}
+        \item písanie zdrojového textu,
+        \item preklad,
+        \item sledovanie výsledku.
+    \end{enumerate}
+
+\section{Ako sa naučiť \LaTeX}
+Exituje mnoho návodov, tutoriálov a zdrojov, z ktorých sa človek môže \LaTeX \: naučiť. Avšak záleží na človeku, aká forma učenia mu vyhovuje. Pre tých, ktorým vyhovuje učenie z kníh, môžem odporučiť českú knihu \uv{\emph{LaTeX pro začátečníky}} \cite{Rybicka2003} alebo knihu v anglickom jazyku \uv{\emph{Guide to LaTeX}} \cite{KopkaHelmut2004GtL}. Pre fanúšikov učenia sa z online materiálov odporúčam stránku Overleaf \footnote{Stránka Overleaf zemaraná na systém LaTeX: \href{https://www.overleaf.com}{https://www.overleaf.com}}, ktorá poskytuje rôzne tutoriály a dokumentáciu k \LaTeX u.
+
+\section{Výhody \LaTeX u}
+Hlavnými výhodami \LaTeX u je automatické zvýrazňovamie syntaxe zdrojových kódov a farebne odlíšené komentáre. Ďalšou výhodou je profesionálna sadzba matematických vzorcov, ktoré ocenia hlavne vedecký pracovníci a autori vedeckých textov. \cite{BartlikJakub2017Sopp}
+
+\subsection{Matematické výrazy}
+Matematické výrazy sú najsilnejšiou stránkou \LaTeX u. Z mojho pohľadu sa mu nevyrovná ani matematické prostredie v MS Word. Matematická sazba v \LaTeX e sa sádza do znakov doláru \$. \TeX\: tvorí vzorčeky vo vnútornom matematickom móde \$~\dots~\$ alebo v display móde \$~\$~\dots~\$~\$~. Pravidla pre tvorbu vzorčekov sú v oboch módoch rovnaké viz \cite{Olsak2021}.
+
+\section{Nevyhodu \LaTeX u}
+Pár nevýhod \LaTeX u zhrnul Kryštof Davidek vo svojom blogu \cite{KrystofDavidek}. Medzi ne patrí napríklad inštalácia \LaTeX u, ktorá zaberá pomerne veľké množstvo úložného priestoru z dôvodu veľkého počtu balíčkov. Za hlavnú nevýhodu \LaTeX u sa považuje dĺžka a náročnosť učenia sa tohto systému. Vzhľadom na WYSIWYG editory je doba učenia násobne väčšia a náročnejšia.
+
+\section{Sazda bibliografie podľa normy ISO 690 v systéme \LaTeX}
+\begin{quote}
+    Dodržiavanie normy ISO 690 pri tvorbe bibliografických odkazov a citácií býva vyžadované mnohými inštitúciami nielen v českom akademickom prostredí. V systéme LATEX však doteraz neexistovala žiadna podpora, ktorá by plnohodnotne riešila túto problematiku. Až na základe referenčnej implementácie balíka biblatex-iso690 vznikol balíček, ktorý splňuje požiadavky normy v plnom rozsahu a výrazne tak zjednodušuje citovanie informačných zdrojov. \cite{Luptak2016}
+\end{quote}
+
+
+\section{Konverzia \LaTeX u do XML}
+Potreba preložiť \LaTeX\: do iných formátor ako je napríkald HTML alebo XML bola zistená a sledovaná už niekoľko rokov. Preto vzniklo niekoľko nástrojov na konverziu do týchto požadovaných formátov. Preto vznikli nástroje ako \texttt{latex2html} alebo \texttt{LaTeXML} viz \cite{KohlhaseMichael2008ULaa}.
+
+
+\newpage
+	\bibliographystyle{czechiso}
+	\renewcommand{\refname}{Literatura}
+	\bibliography{proj4}
+\end{document}
